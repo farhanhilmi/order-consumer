@@ -19,7 +19,7 @@ mongoose.connection.on('error', (err) => {
 try {
   const client = new Kafka({
     clientId: 'order-service',
-    brokers: ['localhost:9092'],
+    brokers: ['localhost:8092'],
   });
 
   const consumer = client.consumer({ groupId: 'orderservice' });
